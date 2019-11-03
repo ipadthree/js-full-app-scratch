@@ -1,0 +1,49 @@
+{
+  "name": "scratch",
+  "version": "1.0.0",
+  "description": "learn again",
+  "main": "index.js",
+  "author": "Jay Liang",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn dev:start",
+    "dev:start": "nodemon --ignore lib --exec babel-node src/server",
+    "prod:build": "rimraf lib && babel src -d lib --ignore .test.js",
+    "prod:start": "cross-env NODE_ENV=production pm2 start lib/server && pm2 logs",
+    "prod:stop": "pm2 delete server",
+    "test": "eslint src && flow && jest --coverage",
+    "precommit": "yarn test",
+    "prepush": "yarn test && yarn prod:build"
+  },
+  "browserslist": [
+    "> 1%"
+  ],
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-plugin-compat": "^3.3.0",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "flow-bin": "^0.111.1",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "pm2": "^4.1.2",
+    "rimraf": "^3.0.0"
+  }
+}
