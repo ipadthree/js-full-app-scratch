@@ -23,7 +23,10 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "compression": "^1.7.4",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-hot-loader": "^4.5.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
@@ -31,10 +34,12 @@
     "@babel/node": "^7.6.3",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.6.3",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-flow-react-proptypes": "^25.1.0",
     "cross-env": "^6.0.3",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "18.0.1",
