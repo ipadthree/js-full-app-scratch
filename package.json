@@ -13,6 +13,7 @@
     "prod:start": "cross-env NODE_ENV=production pm2 start lib/server && pm2 logs",
     "prod:stop": "pm2 delete server",
     "test": "yarn lint && flow",
+    "jest": "jest --coverage",
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx"
   },
   "browserslist": [
@@ -23,6 +24,7 @@
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "immutable": "4.0.0-rc.2",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-hot-loader": "^4.5.3",
