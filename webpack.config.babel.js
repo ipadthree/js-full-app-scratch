@@ -20,7 +20,7 @@ export default {
             { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
         ],
     },
-    devtool: isProd ? false : 'source-map',
+    devtool: isProd ? false : 'cheap-module-source-map',
     resolve: {
         extensions: ['.js', '.jsx'],
     },
