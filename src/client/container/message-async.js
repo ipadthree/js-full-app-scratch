@@ -8,4 +8,4 @@ const mapStateToProps = state => ({
     message: state.hello.get('messageAsync'),
 })
   
-  export default connect(mapStateToProps)(MessageAsync)
+export default connect(mapStateToProps)(MessageAsync)
